@@ -1,0 +1,27 @@
+.home-container h1 {
+  padding-bottom: 30px;
+}
+
+.home-container p {
+  color: purple;
+  padding-right: 30px;
+}
+
+.app-content {
+  position: relative;
+}
+
+.app-content:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url(../assets/images/page_bg_home.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}

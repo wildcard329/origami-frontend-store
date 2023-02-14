@@ -1,0 +1,20 @@
+h1.app-atom, h2.app-atom, h3.app-atom, h4.app-atom, h5.app-atom, h6.app-atom {
+  text-transform: capitalize;
+}
+
+h1.app-atom {
+  font-size: 30px;
+}
+
+h2.app-atom {
+  font-size: 26px;
+}
+
+p.app-atom {
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.app-atom {
+  color: purple;
+}

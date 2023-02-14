@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "crane",
+    "description": "Bring peace and beauty to your life with our origami paper crane! Made from premium quality paper, this timeless design is easy to fold and creates a stunning piece of art. With its delicate wings and intricate details, our origami paper crane symbolizes peace and good luck. Use it as a unique decoration, or give it as a thoughtful gift to a friend or loved one. Order your origami paper crane today and experience the joy of origami!",
+    "price": 5,
+    "quantity": 10,
+    "category": "crane",
+    "image": "../../src/assets/images/image_50401793.JPG",
+    "image_alt": "paper_crane"
+  },
+  {
+    "id": 1,
+    "name": "dragon",
+    "description": "Bring peace and beauty to your life with our origami paper crane! Made from premium quality paper, this timeless design is easy to fold and creates a stunning piece of art. With its delicate wings and intricate details, our origami paper crane symbolizes peace and good luck. Use it as a unique decoration, or give it as a thoughtful gift to a friend or loved one. Order your origami paper crane today and experience the joy of origami!",
+    "price": 25,
+    "quantity": 10,
+    "category": "dragon",
+    "image": "../../src/assets/images/image_50406913.JPG",
+    "image_alt": "paper_dragon"
+  },
+  {
+    "id": 2,
+    "name": "striated octahedron",
+    "description": "Unleash your creativity with our Origami Striated Octahedron! This unique and intricate paper craft design features striking striated patterns, transforming a simple sheet of paper into a beautiful and eye-catching geometric form. Perfect for both beginners and advanced origami enthusiasts, this octahedron adds a touch of elegance to any room and makes a great gift for anyone who appreciates the art of paper folding.",
+    "price": 15,
+    "quantity": 10,
+    "category": "geometric",
+    "image": "../../src/assets/images/image_50419457.JPG",
+    "image_alt": "paper_crane"
+  }
+]
