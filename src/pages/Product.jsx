@@ -6,6 +6,7 @@ import AppParagraph from '../components/atoms/AppParagraph';
 import "./product.css";
 import AppH1 from '../components/atoms/AppH1';
 import CartContext from '../utils/contexts/cartContext';
+import AppButton from '../components/atoms/AppButton';
 
 const Product = () => {
   const [product, setProduct] = useState({});
@@ -22,7 +23,7 @@ const Product = () => {
       <AppH2 text={`paper ${product?.name}`} />
       <AppParagraph text={product?.description} />
       <AppParagraph text={`In Stock: ${product?.quantity}`} />
-      <button onClick={() => addToCart(product)}>add to cart</button>
+      <AppButton btnCb={() => addToCart(product)} btnLabel='add to cart' />
     </div>
   )
 }

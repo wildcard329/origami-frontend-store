@@ -1,20 +1,45 @@
-import React from "react";
+import React, { useContext } from "react";
 import AppH3 from "../atoms/AppH3";
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import HorizontalCard from "../molecules/HorizontalCard";
+import CartContext from "../../utils/contexts/cartContext";
+import { useNavigate } from 'react-router-dom';
 import "./modal.css";
+import AppButton from "../atoms/AppButton";
 
 const Modal = ({ modalTitle, modalContent, modalFooter, modalCb }) => {
-
+  const { toggleCart } = useContext(CartContext);
+  const navigate = useNavigate();
+  const goToCheckout = () => {
+    toggleCart();
+    navigate('/checkout');
+  };
   return(
     <div className='app-modal'>
-      <header>
+      <header className='modal-header'>
         <AppH3 text={modalTitle} />
+        <AiOutlineCloseCircle fill='orange' onClick={toggleCart} className='modal-icon' />
       </header>
-      <main>
-        {modalContent.map((item) => <HorizontalCard title={item.name} />)}
+      <main className='modal-content'>
+        {/* {modalContent.map((item) => <HorizontalCard key={item.id} title={item.name} />)} */}
+        <div className="span-3">
+          <span>Name</span>
+          <span>Amount</span>
+          <span>Price</span>
+        </div>
+        <ul>
+          {modalContent.map((item, index) => 
+            <li className="modal-list" key={`${item.id}-${index}`}>
+              <h5>{item.name}</h5>
+              <span>{item.quantity}</span>
+              <span>${item.price * item.quantity}</span>
+            </li>
+          )}
+        </ul>
       </main>
-      <footer>
-        <button onClick={modalCb}>{modalFooter}</button>
+      <footer className='modal-footer'>
+        {/* <button onClick={goToCheckout}>{modalFooter}</button> */}
+        <AppButton btnCb={goToCheckout} btnLabel={modalFooter} />
       </footer>
     </div>
   )

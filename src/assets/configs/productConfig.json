@@ -28,5 +28,35 @@
     "category": "geometric",
     "image": "../../src/assets/images/image_50419457.JPG",
     "image_alt": "paper_crane"
+  },
+  {
+    "id": 3,
+    "name": "tessalation",
+    "description": "Unleash your creativity with our Origami Striated Octahedron! This unique and intricate paper craft design features striking striated patterns, transforming a simple sheet of paper into a beautiful and eye-catching geometric form. Perfect for both beginners and advanced origami enthusiasts, this octahedron adds a touch of elegance to any room and makes a great gift for anyone who appreciates the art of paper folding.",
+    "price": 15,
+    "quantity": 10,
+    "category": "geometric",
+    "image": "../../src/assets/images/image_67233537.JPG",
+    "image_alt": "paper_tessalation"
+  },
+  {
+    "id": 4,
+    "name": "lotus",
+    "description": "Unleash your creativity with our Origami Striated Octahedron! This unique and intricate paper craft design features striking striated patterns, transforming a simple sheet of paper into a beautiful and eye-catching geometric form. Perfect for both beginners and advanced origami enthusiasts, this octahedron adds a touch of elegance to any room and makes a great gift for anyone who appreciates the art of paper folding.",
+    "price": 17,
+    "quantity": 10,
+    "category": "flower",
+    "image": "../../src/assets/images/image_67213057.JPG",
+    "image_alt": "paper_lotus"
+  },
+  {
+    "id": 5,
+    "name": "lily",
+    "description": "Unleash your creativity with our Origami Striated Octahedron! This unique and intricate paper craft design features striking striated patterns, transforming a simple sheet of paper into a beautiful and eye-catching geometric form. Perfect for both beginners and advanced origami enthusiasts, this octahedron adds a touch of elegance to any room and makes a great gift for anyone who appreciates the art of paper folding.",
+    "price": 17,
+    "quantity": 10,
+    "category": "flower",
+    "image": "../../src/assets/images/image_50394113.JPG",
+    "image_alt": "paper_lily"
   }
 ]

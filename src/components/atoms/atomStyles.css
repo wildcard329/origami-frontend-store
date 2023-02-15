@@ -18,3 +18,18 @@ p.app-atom {
 .app-atom {
   color: purple;
 }
+
+.app-button {
+  background-color: orange;
+  color: purple;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.app-button:hover {
+  opacity: 0.9;
+  box-shadow: 2px 2px 2px 1px rgba(241, 186, 122, 0.8);
+}
