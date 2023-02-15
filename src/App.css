@@ -29,6 +29,7 @@
 .app-content {
   min-height: 80vh;
   padding: 10%;
+  position: relative;
 }
 
 .app-footer {

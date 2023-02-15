@@ -1,0 +1,11 @@
+.app-modal {
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  right: 0;
+  left: 0;
+  background-color: white;
+  width: 60%;
+  margin: 0 auto;
+  min-height: 40vh;
+}

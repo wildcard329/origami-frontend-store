@@ -1,0 +1,8 @@
+.cart-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  padding: 10px;
+  border: 2px solid orange;
+  cursor: pointer;
+}
