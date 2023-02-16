@@ -1,0 +1,31 @@
+.app-messages {
+  list-style: none;
+  position: fixed;
+  z-index: 1;
+  top: 180px;
+  right: 10px;
+  border-bottom: 2px solid #111;
+  border-right: 2px solid #111;
+}
+
+.app-messages li {
+  background-color: black;
+  color: orange;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  text-transform: capitalize;
+  align-items: baseline;
+  padding: 10px;
+}
+
+.app-messages li:hover {
+  background-color: #111;
+}
+
+.app-messages button {
+  width: min-content;
+  white-space: nowrap;
+}

@@ -45,6 +45,12 @@
   width: 500px;
 }
 
+.scroll-lock {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .row {
   display: flex;
   flex-direction: row;

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import AppH3 from "../atoms/AppH3";
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import HorizontalCard from "../molecules/HorizontalCard";
 import CartContext from "../../utils/contexts/cartContext";
 import { useNavigate } from 'react-router-dom';
 import "./modal.css";
@@ -21,7 +20,6 @@ const Modal = ({ modalTitle, modalContent, modalFooter, modalCb }) => {
         <AiOutlineCloseCircle fill='orange' onClick={toggleCart} className='modal-icon' />
       </header>
       <main className='modal-content'>
-        {/* {modalContent.map((item) => <HorizontalCard key={item.id} title={item.name} />)} */}
         <div className="span-3">
           <span>Name</span>
           <span>Amount</span>
@@ -38,7 +36,6 @@ const Modal = ({ modalTitle, modalContent, modalFooter, modalCb }) => {
         </ul>
       </main>
       <footer className='modal-footer'>
-        {/* <button onClick={goToCheckout}>{modalFooter}</button> */}
         <AppButton btnCb={goToCheckout} btnLabel={modalFooter} />
       </footer>
     </div>

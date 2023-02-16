@@ -5,6 +5,10 @@
   border-radius: 15px;
 }
 
+.product-card:hover {
+  background-color: #111;
+}
+
 .product-card h3 {
   color: orange;
   text-transform: capitalize;
