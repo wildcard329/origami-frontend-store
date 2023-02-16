@@ -13,12 +13,12 @@
 .modal-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .span-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .modal-header {

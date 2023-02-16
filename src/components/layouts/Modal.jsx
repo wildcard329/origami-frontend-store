@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import AppH3 from "../atoms/AppH3";
 import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { BsTrash } from 'react-icons/bs';
 import CartContext from "../../utils/contexts/cartContext";
 import { useNavigate } from 'react-router-dom';
 import "./modal.css";
 import AppButton from "../atoms/AppButton";
 
 const Modal = ({ modalTitle, modalContent, modalFooter, modalCb }) => {
-  const { toggleCart } = useContext(CartContext);
+  const { toggleCart, removeFromCart } = useContext(CartContext);
   const navigate = useNavigate();
   const goToCheckout = () => {
     toggleCart();
@@ -31,6 +32,7 @@ const Modal = ({ modalTitle, modalContent, modalFooter, modalCb }) => {
               <h5>{item.name}</h5>
               <span>{item.quantity}</span>
               <span>${item.price * item.quantity}</span>
+              <BsTrash fill='orange' onClick={() => removeFromCart(item.id)} />
             </li>
           )}
         </ul>
