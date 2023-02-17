@@ -6,7 +6,7 @@
     "price": 5,
     "quantity": 10,
     "category": "crane",
-    "image": "../../src/assets/images/image_50401793.JPG",
+    "image": "../../src/assets/images/image_50401793.jpg",
     "image_alt": "paper_crane"
   },
   {
@@ -16,7 +16,7 @@
     "price": 25,
     "quantity": 10,
     "category": "dragon",
-    "image": "../../src/assets/images/image_50406913.JPG",
+    "image": "../../src/assets/images/image_50406913.jpg",
     "image_alt": "paper_dragon"
   },
   {
@@ -26,7 +26,7 @@
     "price": 15,
     "quantity": 10,
     "category": "geometric",
-    "image": "../../src/assets/images/image_50419457.JPG",
+    "image": "../../src/assets/images/image_50419457.jpg",
     "image_alt": "paper_crane"
   },
   {
@@ -36,7 +36,7 @@
     "price": 15,
     "quantity": 10,
     "category": "geometric",
-    "image": "../../src/assets/images/image_67233537.JPG",
+    "image": "../../src/assets/images/image_67233537.jpg",
     "image_alt": "paper_tessalation"
   },
   {
@@ -46,7 +46,7 @@
     "price": 17,
     "quantity": 10,
     "category": "flower",
-    "image": "../../src/assets/images/image_67213057.JPG",
+    "image": "../../src/assets/images/image_67213057.jpg",
     "image_alt": "paper_lotus"
   },
   {
@@ -56,7 +56,7 @@
     "price": 17,
     "quantity": 10,
     "category": "flower",
-    "image": "../../src/assets/images/image_50394113.JPG",
+    "image": "../../src/assets/images/image_50394113.jpg",
     "image_alt": "paper_lily"
   }
 ]
