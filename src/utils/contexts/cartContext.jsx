@@ -8,10 +8,10 @@ export const CartProvider = ({ children }) => {
   const [shouldShowCart, setShouldShowCart] = useState(false);
   const [cart, setCart] = useState([]);
 
-  const addToCart = async ({ product, messageCallback, successMsg, stockErrMsg, errMsg }) => {
+  const addToCart = async ({ product, productQty, messageCallback, successMsg, stockErrMsg, errMsg }) => {
     const cartItem = findItem(cart, product);
     const cartWithoutItem = cart.filter((cProduct) => cProduct.id !== product.id);
-    const itemToAdd = { ...product, quantity: cartItem?.quantity + 1 || 1 };
+    const itemToAdd = { ...product, quantity: productQty || cartItem?.quantity + 1 || 1 };
     if (!cartItem) {
       await setCart((products) => [...products, itemToAdd]);
       messageCallback(successMsg);
