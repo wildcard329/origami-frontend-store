@@ -1,21 +1,20 @@
 import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from './assets/images/79Eignqkliu1bLJPO9jw--1--7vtfx.jpg';
 import CartHeader from './components/templates/CartHeader';
 import Messages from './components/layouts/Messages.jsx';
 import Modal from './components/layouts/Modal';
 import CartContext from './utils/contexts/cartContext';
+import ModalContext from './utils/contexts/modalContext';
+import CartContent from './components/templates/CartContent';
 
 const AppLayout = ({ children }) => {
-  const { shouldShowCart, cart } = useContext(CartContext);
-  const scrollLockedNode = document.getElementById('root');
-  useEffect(() => {
-    if (shouldShowCart) {
-      scrollLockedNode.classList.add('scroll-lock')
-    } else {
-      scrollLockedNode.classList.remove('scroll-lock')
-    };
-  }, [shouldShowCart]);
+  const { shouldShowModal: shouldShowCart, toggleModal: toggleCart } = useContext(ModalContext);
+  const navigate = useNavigate();
+  const goToCheckout = () => {
+    toggleCart();
+    navigate('/checkout');
+  };
   return(
     <div id='layout'>
       <header className='app-header'>
@@ -32,7 +31,11 @@ const AppLayout = ({ children }) => {
       <div className='app-content'>
         <Messages />
         {children}
-        {shouldShowCart ? <Modal modalTitle='Your Cart' modalContent={cart} modalFooter='Checkout' /> : null}
+        {shouldShowCart ? 
+          <Modal modalTitle='Your Cart' footerBtnCb={goToCheckout} footerBtnLabel='go to checkout'>
+            <CartContent />
+          </Modal> 
+        : null}
       </div>
       <footer className='app-footer'>
         <p>2023 Online Origami Store</p>
@@ -42,3 +45,4 @@ const AppLayout = ({ children }) => {
 }
 
 export default AppLayout;
+ 

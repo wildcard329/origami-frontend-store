@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import "./cartheader.css";
 import { AiOutlineShoppingCart } from "react-icons/ai"
-import CartProvider from "../../utils/contexts/cartContext";
+import ModalContext from "../../utils/contexts/modalContext";
 
 const CartHeader = () => {
-  const { toggleCart } = useContext(CartProvider);
+  const { toggleModal } = useContext(ModalContext);
   return(
-    <AiOutlineShoppingCart onClick={toggleCart} fill='orange' className='cart-icon' />
+    <AiOutlineShoppingCart onClick={toggleModal} fill='orange' className='cart-icon' />
   )
 }
 

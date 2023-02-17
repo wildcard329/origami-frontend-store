@@ -1,44 +1,23 @@
 import React, { useContext } from "react";
 import AppH3 from "../atoms/AppH3";
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { BsTrash } from 'react-icons/bs';
-import CartContext from "../../utils/contexts/cartContext";
-import { useNavigate } from 'react-router-dom';
-import "./modal.css";
+import ModalContext from "../../utils/contexts/modalContext";
 import AppButton from "../atoms/AppButton";
+import "./modal.css";
 
-const Modal = ({ modalTitle, modalContent, modalFooter, modalCb }) => {
-  const { toggleCart, removeFromCart } = useContext(CartContext);
-  const navigate = useNavigate();
-  const goToCheckout = () => {
-    toggleCart();
-    navigate('/checkout');
-  };
+const Modal = ({ modalTitle, children, footerBtnCb, footerBtnLabel }) => {
+  const { toggleModal } = useContext(ModalContext);
   return(
     <div className='app-modal'>
       <header className='modal-header'>
         <AppH3 text={modalTitle} />
-        <AiOutlineCloseCircle fill='orange' onClick={toggleCart} className='modal-icon' />
+        <AiOutlineCloseCircle fill='orange' onClick={toggleModal} className='modal-icon' />
       </header>
       <main className='modal-content'>
-        <div className="span-3">
-          <span>Name</span>
-          <span>Amount</span>
-          <span>Price</span>
-        </div>
-        <ul>
-          {modalContent.map((item, index) => 
-            <li className="modal-list" key={`${item.id}-${index}`}>
-              <h5>{item.name}</h5>
-              <span>{item.quantity}</span>
-              <span>${item.price * item.quantity}</span>
-              <BsTrash fill='orange' onClick={() => removeFromCart(item.id)} />
-            </li>
-          )}
-        </ul>
+        {children}
       </main>
       <footer className='modal-footer'>
-        <AppButton btnCb={goToCheckout} btnLabel={modalFooter} />
+        <AppButton btnCb={footerBtnCb} btnLabel={footerBtnLabel} />
       </footer>
     </div>
   )
