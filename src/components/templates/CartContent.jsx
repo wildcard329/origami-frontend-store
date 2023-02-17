@@ -1,19 +1,12 @@
 import React, { useContext } from "react";
 import { BsTrash } from 'react-icons/bs';
 import CartContext from "../../utils/contexts/cartContext";
-import InputNumber from "../atoms/InputNumber";
 import AppH5 from "../atoms/AppH5";
 import AppParagraph from "../atoms/AppParagraph";
 
 const CartContent = () => {
-  const { removeFromCart, cart, addToCart } = useContext(CartContext);
-  const addProducts = (e) => {
-    const val = e.target.value;
-    // console.log(e.target.value);
-    if (!isNaN(parseInt(val))) {
+  const { removeFromCart, cart } = useContext(CartContext);
 
-    }
-  };
   return(
     <>
       <div className="span-3">
