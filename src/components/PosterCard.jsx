@@ -6,7 +6,7 @@ import AddToCartButton from "./molecules/AddToCartButton";
 
 const PosterCard = ({ product }) => {
   const { id, image, image_alt, name, quantity, price } = product;
-  const getUrl = (path) => new URL(path, import.meta.url).href;
+  const getUrl = (filename) => new URL(`../assets/images/${filename}.jpg`, import.meta.url).href;
   return(
       <div key={id} className='product-card'>
         <Link to={`/origami/${id}`}>

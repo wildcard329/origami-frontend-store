@@ -19,7 +19,6 @@ const CartContent = () => {
           <li className="modal-list" key={`${item.id}-${index}`}>
             <AppH5 text={item.name} />
             <AppParagraph text={item.quantity} />
-            {/* <InputNumber inputValue={item.quantity} inputName='productQuantity' inputChangeCb={addProducts} /> */}
             <AppParagraph text={`$${item.price * item.quantity}`} />
             <BsTrash fill='orange' onClick={() => removeFromCart(item.id)} />
           </li>
