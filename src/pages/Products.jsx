@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getProducts } from '../controllers/productController';
-import PosterCard from '../components/PosterCard.jsx';
+import PosterCard from '../components/templates/PosterCard.jsx';
 import "./products.css";
 
 const Products = () => {

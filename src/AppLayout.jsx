@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from './assets/images/79Eignqkliu1bLJPO9jw--1--7vtfx.jpg';
 import CartHeader from './components/templates/CartHeader';
-import Messages from './components/layouts/Messages.jsx';
-import Modal from './components/layouts/Modal';
-import CartContext from './utils/contexts/cartContext';
+import Messages from './components/templates/Messages.jsx';
+import Modal from './components/templates/Modal';
 import ModalContext from './utils/contexts/modalContext';
 import CartContent from './components/templates/CartContent';
 
