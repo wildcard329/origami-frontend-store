@@ -6,6 +6,7 @@ import AppParagraph from '../components/atoms/AppParagraph';
 import "./product.css";
 import AppH1 from '../components/atoms/AppH1';
 import AddToCartButton from '../components/molecules/AddToCartButton';
+import ProductImage from '../components/molecules/ProductImage';
 
 const Product = () => {
   const [product, setProduct] = useState({});
@@ -17,9 +18,11 @@ const Product = () => {
   return(
     <div className="product-information">
       <AppH1 text={'product information'} />
-      <img src={getUrl(product?.image)} alt={product?.image_alt} />
+      {/* <img src={getUrl(product?.image)} alt={product?.image_alt} /> */}
+      <ProductImage imgName={product?.image} alt={product?.image_alt} />
       <AppH2 text={`paper ${product?.name}`} />
       <AppParagraph text={product?.description} />
+      <AppParagraph text={`Price $${product?.price}`} />
       <AppParagraph text={`In Stock: ${product?.quantity}`} />
       <AddToCartButton product={product} />
     </div>
