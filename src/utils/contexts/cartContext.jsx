@@ -5,7 +5,6 @@ const CartContext = createContext(null);
 const findItem = (itemArr, item) => itemArr.find((arrItem) => arrItem.id === item.id);
 
 export const CartProvider = ({ children }) => {
-  const [shouldShowCart, setShouldShowCart] = useState(false);
   const [cart, setCart] = useState([]);
 
   const addToCart = async ({ product, productQty, messageCallback, successMsg, stockErrMsg, errMsg }) => {
@@ -26,10 +25,10 @@ export const CartProvider = ({ children }) => {
   };
   const removeFromCart = (productId) => setCart((products) => products.filter((product) => product.id !== productId));
 
-  const toggleCart = () => setShouldShowCart(!shouldShowCart);
+  const resetCart = () => setCart([]);
 
   return(
-    <CartContext.Provider value={{ shouldShowCart, toggleCart, cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, resetCart }}>
       {children}
     </CartContext.Provider>
   )

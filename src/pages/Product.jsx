@@ -14,11 +14,9 @@ const Product = () => {
   useEffect(() => {
     setProduct(getProductById(parseInt(id)));
   }, []);
-  const getUrl = (filename) => new URL(`../assets/images/${filename}.jpg`, import.meta.url).href;
   return(
     <div className="product-information">
       <AppH1 text={'product information'} />
-      {/* <img src={getUrl(product?.image)} alt={product?.image_alt} /> */}
       <ProductImage imgName={product?.image} alt={product?.image_alt} />
       <AppH2 text={`paper ${product?.name}`} />
       <AppParagraph text={product?.description} />
