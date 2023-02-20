@@ -3,9 +3,13 @@ import { BsTrash } from 'react-icons/bs';
 import CartContext from "../../utils/contexts/cartContext";
 import AppH5 from "../atoms/AppH5";
 import AppParagraph from "../atoms/AppParagraph";
+import { reduceArray } from "../../utils/functions/arrayMethods";
 
 const CartContent = () => {
   const { removeFromCart, cart } = useContext(CartContext);
+  const totalItems = reduceArray(cart, 'quantity', 0);
+  const cartPrices = cart.map((item) => ({ price: item.price * item.quantity }));
+  const totalPrice = reduceArray(cartPrices, 'price', 0);
 
   return(
     <>
@@ -24,6 +28,11 @@ const CartContent = () => {
           </li>
         )}
       </ul>
+      <div className="span-3">
+        <AppH5 text={'Total'} />
+        <AppParagraph text={totalItems} />
+        <AppParagraph text={`$${totalPrice}`} />
+      </div>
     </>
   )
 }

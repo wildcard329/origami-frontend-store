@@ -1,12 +1,15 @@
 import React, { useContext } from "react";
 import CartContext from "../../utils/contexts/cartContext";
 import MessageContext from "../../utils/contexts/messageContext";
+import ModalContext from "../../utils/contexts/modalContext";
 import AppButton from "../atoms/AppButton";
 
 const AddToCartButton = ({ product }) => {
+  const { changeToCart } = useContext(ModalContext);
   const { addToCart } = useContext(CartContext);
   const { addMessage, newMsgId } = useContext(MessageContext);
   const addItemToCart = () => {
+    changeToCart();
     const message = { text: `${product.name} added to cart!`, id: newMsgId, type: 'cart' };
     const stockErr = { text: `No more ${product.name} available.`, id: newMsgId, type: 'warning' };
     const generalErr = { text: `Unable to add ${product.name} to cart.`, id: newMsgId, type: 'warning' };

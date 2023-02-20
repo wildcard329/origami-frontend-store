@@ -4,16 +4,25 @@ import Logo from './assets/images/79Eignqkliu1bLJPO9jw--1--7vtfx.jpg';
 import CartHeader from './components/templates/CartHeader';
 import Messages from './components/templates/Messages.jsx';
 import Modal from './components/templates/Modal';
+import CartContext from './utils/contexts/cartContext';
 import ModalContext from './utils/contexts/modalContext';
 import CartContent from './components/templates/CartContent';
 
 const AppLayout = ({ children }) => {
-  const { shouldShowModal: shouldShowCart, toggleModal: toggleCart } = useContext(ModalContext);
+  const { shouldShowModal, toggleModal, isCartModal, isConfirmationModal, changeToCart } = useContext(ModalContext);
+  const { resetCart } = useContext(CartContext);
   const navigate = useNavigate();
   const goToCheckout = () => {
-    toggleCart();
+    toggleModal();
     navigate('/checkout');
   };
+  const goToHome = () => {
+    toggleModal();
+    resetCart();
+    navigate('/');
+    changeToCart();
+  };
+  console.log('type ', isCartModal, isConfirmationModal)
   return(
     <div id='layout'>
       <header className='app-header'>
@@ -30,10 +39,16 @@ const AppLayout = ({ children }) => {
       <div className='app-content'>
         <Messages />
         {children}
-        {shouldShowCart ? 
+        {shouldShowModal && isCartModal() ? 
           <Modal modalTitle='Your Cart' footerBtnCb={goToCheckout} footerBtnLabel='go to checkout'>
             <CartContent />
           </Modal> 
+        : null}
+        {shouldShowModal && isConfirmationModal() ?
+          <Modal modalTitle='Order Confirmed' footerBtnCb={goToHome} footerBtnLabel='back to home'>
+            <h3>Thank you for placing your order!</h3>
+            <p>Order will be available for pickup at nearest retail location.</p>
+          </Modal>
         : null}
       </div>
       <footer className='app-footer'>
