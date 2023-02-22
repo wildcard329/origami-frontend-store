@@ -1,8 +1,11 @@
 import React from "react";
+import './suspensefallback.css';
 
 const SuspenseFallback = () => 
-  <div className="morphing-demo">
-    <div className="polymorph"></div>
+  <div className="box black">
+    <div className="box orange">
+      <div className="box purple"></div>
+    </div>
   </div>
 
 export default SuspenseFallback;
