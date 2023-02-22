@@ -1,9 +1,3 @@
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
 .app-content {
   min-height: 80vh;
   padding: 10%;
