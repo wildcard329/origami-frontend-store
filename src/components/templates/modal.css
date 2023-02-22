@@ -8,6 +8,7 @@
   width: 60%;
   margin: 0 auto;
   min-height: 40vh;
+  animation: grow 0.25s linear;
 }
 
 .modal-list {
@@ -47,4 +48,13 @@
   height: 25px;
   width: 25px;
   cursor: pointer;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.1);
+  } 
+  to {
+    transform: scale(1);
+  }
 }

@@ -19,9 +19,10 @@ export const MessageProvider = ({ children }) => {
     discardMsg(msg);
   };
   const removeMessage = (msg) => setMessages((msgData) => msgData.filter((fMsg) => fMsg.id !== msg.id));
+  const clearMessages = () => setMessages([]);
 
   return(
-    <MessageContext.Provider value={{ messages, addMessage, removeMessage, newMsgId }}>
+    <MessageContext.Provider value={{ messages, addMessage, removeMessage, newMsgId, clearMessages }}>
       {children}
     </MessageContext.Provider>
   )
