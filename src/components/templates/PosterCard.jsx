@@ -13,7 +13,7 @@ const PosterCard = ({ product }) => {
           <ProductImage imgName={image} alt={image_alt} />
         </Link>
         <h3>paper {name} <span>${price}</span></h3>
-        <div className="row">
+        <div className="card-footer">
           <AppParagraph text={`In Stock: ${quantity}`} />
           <AddToCartButton product={product} />
         </div>
