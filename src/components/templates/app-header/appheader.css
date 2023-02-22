@@ -12,6 +12,16 @@
   font-size: xx-large;
   text-decoration: none;
   padding: 20px;
+  border-bottom: 5px solid black;
+}
+
+.app-header a:hover, 
+.app-header a:focus,
+html.home .app-header a[href="/"],
+html.origami .app-header a[href="/origami"],
+html.books .app-header a[href="/books"] {
+  outline: none;
+  border-bottom: 5px solid orange;
 }
 
 .desktop-nav {
@@ -34,14 +44,19 @@
   }
   .desktop-nav {
     display: inline-block;
+    margin-left: 30%;
   }
 }
 
 @media (min-width: 1024px) {
-
+  .desktop-nav {
+    margin-left: 40%;
+  }
 }
 
 @media (min-width: 1200px) {
-  
+  .desktop-nav {
+    margin-left: 45%;
+  }
 }
 
