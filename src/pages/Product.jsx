@@ -14,10 +14,11 @@ const Product = () => {
   useEffect(() => {
     setProduct(getProductById(parseInt(id)));
   }, []);
+  console.log('product ', product);
   return(
     <div className="product-information">
       <AppH1 text={'product information'} />
-      <ProductImage imgName={product?.image} alt={product?.image_alt} />
+      <ProductImage imgName={product && product?.image} alt={product?.image_alt} />
       <AppH2 text={`paper ${product?.name}`} />
       <AppParagraph text={product?.description} />
       <AppParagraph text={`Price $${product?.price}`} />

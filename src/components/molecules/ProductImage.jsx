@@ -6,16 +6,23 @@ const ProductImage = ({ imgName, alt }) => {
   const [isLoadingImage, setIsLoadingImage] = useState(true);
   const [imgSrc, setImgSrc] = useState('');
   const getUrl = (filename) => new URL(`../../assets/images/${filename}.jpg`, import.meta.url).href;
+  const loadImage = (filename) => {
+    if (!!filename) {
+      const imageSrc=getUrl(filename);
+      setImgSrc(imageSrc);
+      setIsLoadingImage(false);
+    } else {
+      setIsLoadingImage(true);
+    };
+  };
   useEffect(() => {
-    setImgSrc(getUrl(imgName));
-    setIsLoadingImage(false);
-  }, []);
-  if (isLoadingImage) {
-    return(
-      <SuspenseFallback />
-    )
+    loadImage(imgName);
+  }, [imgName]);
+  if (!isLoadingImage) {
+    return <AppImage source={imgSrc} alt={alt} />
+  } else {
+    return <SuspenseFallback />
   }
-  return <AppImage source={imgSrc} alt={alt} />
 }
 
 export default ProductImage;

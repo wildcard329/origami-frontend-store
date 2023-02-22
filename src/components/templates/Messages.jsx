@@ -7,10 +7,11 @@ import "./messages.css";
 
 const Messages = () => {
   const { toggleModal } = useContext(ModalContext);
-  const { messages, removeMessage } = useContext(MessageContext);
+  const { messages, removeMessage, clearMessages } = useContext(MessageContext);
   return(
     <ul className="app-messages">
-      {messages?.map((message, index) => <li key={index}><div><AiOutlineCloseCircle onClick={() => removeMessage(message)} />{message.text}</div><AppButton btnCb={toggleModal} btnLabel='view cart' /></li>)}
+      {messages?.map((message, index) => <li className='app-message' key={index}><div><AiOutlineCloseCircle onClick={() => removeMessage(message)} />{message.text}</div><AppButton btnCb={toggleModal} btnLabel='view cart' /></li>)}
+      {messages.length > 0 && <AppButton btnCb={clearMessages} btnLabel='clear messages' />}
     </ul>
   )
 }
