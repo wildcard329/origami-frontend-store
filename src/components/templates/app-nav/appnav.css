@@ -1,0 +1,15 @@
+.app-nav-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+}
+
+@media (min-width: 768px) {
+  .app-nav-container {
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -4,28 +4,6 @@
   gap: 30px;
 }
 
-.logo {
-  height: 100px;
-  width: 100px;
-  border-radius: 10px;
-}
-
-.app-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 30px;
-  background-color: black;
-}
-
-.app-header a {
-  color: orange;
-  font-size: xx-large;
-  text-decoration: none;
-  padding: 20px;
-}
-
 .app-content {
   min-height: 80vh;
   padding: 10%;
@@ -56,4 +34,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 1024px) {
+  
+}
+
+@media (max-width: 1200px) {
+  
 }
