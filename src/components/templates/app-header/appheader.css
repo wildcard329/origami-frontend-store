@@ -1,0 +1,47 @@
+.app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: black;
+}
+
+.app-header a {
+  color: orange;
+  font-size: xx-large;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: inline-block;
+  padding: 10px;
+  font-size: 28px;
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-nav {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1200px) {
+  
+}
+

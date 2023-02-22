@@ -33,3 +33,17 @@ p.app-atom {
   opacity: 0.9;
   box-shadow: 2px 2px 2px 1px rgba(241, 186, 122, 0.8);
 }
+
+.app-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .app-logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+  }  
+}
