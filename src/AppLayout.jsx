@@ -22,7 +22,6 @@ const AppLayout = ({ children }) => {
     navigate('/');
     changeToCart();
   };
-  console.log('type ', isCartModal, isConfirmationModal)
   return(
     <div id='layout'>
       <header className='app-header'>

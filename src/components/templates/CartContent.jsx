@@ -4,6 +4,7 @@ import CartContext from "../../utils/contexts/cartContext";
 import AppH5 from "../atoms/AppH5";
 import AppParagraph from "../atoms/AppParagraph";
 import { reduceArray } from "../../utils/functions/arrayMethods";
+import HorizontalCardSpan4 from "../molecules/HorizontalCardSpan4";
 
 const CartContent = () => {
   const { removeFromCart, cart } = useContext(CartContext);
@@ -13,26 +14,21 @@ const CartContent = () => {
 
   return(
     <>
-      <div className="span-3">
-        <AppParagraph text={'Name'} />
-        <AppParagraph text={'Amount'} />
-        <AppParagraph text={'Price'} />
-      </div>
+      <HorizontalCardSpan4 title={'Name'} content1={'Amount'} content2={'Price'} />
       <ul>
-        {cart.map((item, index) => 
-          <li className="modal-list" key={`${item.id}-${index}`}>
-            <AppH5 text={item.name} />
-            <AppParagraph text={item.quantity} />
-            <AppParagraph text={`$${item.price * item.quantity}`} />
-            <BsTrash fill='orange' onClick={() => removeFromCart(item.id)} />
-          </li>
+        {cart.map((item, index) => {
+              return (<li className="modal-list" key={`${item.id}-${index}`}>
+                <HorizontalCardSpan4 
+                  title={item.name} 
+                  content1={item.quantity} 
+                  content2={`$${item.price * item.quantity}`} 
+                  btnContent={<BsTrash fill='orange' onClick={() => removeFromCart(item.id)} />}
+                />
+            </li>)
+          }
         )}
       </ul>
-      <div className="span-3">
-        <AppH5 text={'Total'} />
-        <AppParagraph text={totalItems} />
-        <AppParagraph text={`$${totalPrice}`} />
-      </div>
+      <HorizontalCardSpan4 title={'Total'} content1={totalItems} content2={`$${totalPrice}`} />
     </>
   )
 }
