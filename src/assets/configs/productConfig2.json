@@ -1,0 +1,82 @@
+[
+  {
+    "id": 8,
+    "name": "Fold and Fun: Easy Origami for Kids",
+    "description": "This book is the perfect introduction to the fun and colorful world of origami for kids! With step-by-step instructions and diagrams, kids can learn how to fold animals, flowers, and other fun designs.",
+    "price": 15,
+    "quantity": 12,
+    "category": "beginner",
+    "image": "origami_book_beginner_1",
+    "image_alt": "origami_for_kids"
+  },
+  {
+    "id": 9,
+    "name": "Origami for Busy People: Simple Projects for a Relaxing Break",
+    "description": "If you're looking for a way to unwind during a busy day, this book is for you! With quick and easy designs that can be completed in just a few minutes, you can take a relaxing break and create something beautiful at the same time.",
+    "price": 7,
+    "quantity": 2,
+    "category": "beginner",
+    "image": "origami_book_beginner_2",
+    "image_alt": "origami_for_busy_people"
+  },
+  {
+    "id": 10,
+    "name": "Origami for Mindfulness: Calming Designs for Stress Relief",
+    "description": "This book is a great tool for anyone looking to reduce stress and find peace in the present moment. With calming and meditative designs, you can let go of your worries and focus on the joy of folding paper.",
+    "price": 9,
+    "quantity": 10,
+    "category": "beginner",
+    "image": "origami_book_beginner_3",
+    "image_alt": "origami_for_mindfulness"
+  },
+  {
+    "id": 11,
+    "name": "Paper Magic: Simple Origami Projects for All Ages",
+    "description": "Whether you're a beginner or an experienced folder, this book has something for everyone. With a variety of designs that range from easy to more challenging, you can explore the magic of paper folding and create something truly unique.",
+    "price": 25,
+    "quantity": 6,
+    "category": "beginner",
+    "image": "origami_book_beginner_4",
+    "image_alt": "paper_magic"
+  },
+  {
+    "id": 12,
+    "name": "Advanced Origami Techniques: Mastering the Art of Folding",
+    "description": "This book is designed for those who have already mastered the basics of origami and are ready to take their skills to the next level. With in-depth instructions and detailed diagrams, you can learn advanced techniques such as wet folding, box pleating, and more.",
+    "price": 25,
+    "quantity": 2,
+    "category": "intermediate",
+    "image": "origami_book_intermediate_1",
+    "image_alt": "advanced_origami_techniques"
+  },
+  {
+    "id": 13,
+    "name": "Origami Architecture: Building Complex Structures with Paper",
+    "description": "If you're interested in creating intricate structures and designs, this book is for you. With step-by-step instructions and advanced techniques, you can learn how to build origami models of buildings, bridges, and other architectural wonders.",
+    "price": 27,
+    "quantity": 4,
+    "category": "intermediate",
+    "image": "origami_book_intermediate_2",
+    "image_alt": "building_complex_structures_with_paper"
+  },
+  {
+    "id": 14,
+    "name": "Origami for Decoration: Creating Beautiful Designs for Your Home",
+    "description": "If you're looking to add a touch of elegance to your home, this book is for you. With designs ranging from simple to complex, you can learn how to create beautiful origami decorations for your living room, dining room, and more. From floral arrangements to geometric designs, this book has it all.",
+    "price": 22,
+    "quantity": 7,
+    "category": "intermediate",
+    "image": "origami_book_intermediate_3",
+    "image_alt": "origami_for_decoration"
+  },
+  {
+    "id": 15,
+    "name": "Origami Mastery: Pushing the Limits of Paper Folding",
+    "description": "",
+    "price": 5,
+    "quantity": 10,
+    "category": "advanced",
+    "image": "origami_book_advanced_1",
+    "image_alt": "This book is for those who have already mastered intermediate-level origami and are looking to take their skills to the next level. With advanced techniques and complex designs, this book will challenge even the most skilled folder. From modular origami to tessellations, this book covers a wide range of advanced topics in the art of paper folding. With step-by-step instructions and detailed diagrams, you can learn to fold intricate designs that will amaze your friends and family. Whether you're looking to create your own origami masterpieces or simply want to take your skills to the next level, this book is the ultimate guide to the world of advanced origami."
+  }
+]

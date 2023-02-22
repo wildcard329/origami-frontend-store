@@ -13,6 +13,7 @@ const AppRouter = () =>
       <Route path='/' element={<Home />} />
       <Route path='/origami/:id' element={<Product />} />
       <Route path='/origami' element={<Products />} />
+      <Route path='/books' element={<Products />} />
       <Route path='/checkout' element={<Checkout />} />
     </Routes>
   </Suspense>
