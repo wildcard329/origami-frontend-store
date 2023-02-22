@@ -6,6 +6,13 @@ p {
   position: relative;
 }
 
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
 .app-content:before {
   content: ' ';
   display: block;
@@ -20,4 +27,20 @@ p {
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }  
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }  
 }

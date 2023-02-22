@@ -1,9 +1,24 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .home-container h1 {
   padding-bottom: 30px;
+  white-space: nowrap;
 }
 
 .home-container p {
   color: purple;
+  padding-right: 30px;
+}
+
+.home-page-img {
+  width: 100%;
+  padding-bottom: 30px;
+  padding-left: 30px;
   padding-right: 30px;
 }
 
@@ -25,4 +40,14 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    display: inline-block;
+  }
+  .home-page-img {
+    float: right;
+    width: 500px;
+  }
 }
