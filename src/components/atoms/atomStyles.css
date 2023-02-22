@@ -40,7 +40,7 @@ p.app-atom {
   border-radius: 8px;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .app-logo {
     height: 100px;
     width: 100px;
