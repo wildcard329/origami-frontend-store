@@ -5,8 +5,8 @@
   top: 180px;
   right: 10px;
   background-color: black;
-  border-bottom: 2px solid #111;
-  border-right: 2px solid #111;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
 }
 
 .app-message {
@@ -24,7 +24,7 @@
 }
 
 .app-message:hover {
-  background-color: #111;
+  background-color: #333;
 }
 
 .app-messages button {
