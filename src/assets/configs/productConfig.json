@@ -58,5 +58,25 @@
     "category": "flower",
     "image": "lily",
     "image_alt": "paper_lily"
+  },
+  {
+    "id": 6,
+    "name": "spider",
+    "description": "Unleash your creativity with our Origami Striated Octahedron! This unique and intricate paper craft design features striking striated patterns, transforming a simple sheet of paper into a beautiful and eye-catching geometric form. Perfect for both beginners and advanced origami enthusiasts, this octahedron adds a touch of elegance to any room and makes a great gift for anyone who appreciates the art of paper folding.",
+    "price": 17,
+    "quantity": 7,
+    "category": "arachnid",
+    "image": "spider",
+    "image_alt": "paper_spider"
+  },
+  {
+    "id": 7,
+    "name": "modular cubes: octohedron formation",
+    "description": "Unleash your creativity with our Origami Striated Octahedron! This unique and intricate paper craft design features striking striated patterns, transforming a simple sheet of paper into a beautiful and eye-catching geometric form. Perfect for both beginners and advanced origami enthusiasts, this octahedron adds a touch of elegance to any room and makes a great gift for anyone who appreciates the art of paper folding.",
+    "price": 125,
+    "quantity": 1,
+    "category": "geometric",
+    "image": "modular_cubes_octohedron_formation",
+    "image_alt": "paper_modular_cubes"
   }
 ]
