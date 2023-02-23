@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import {  useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import {  useNavigate, useLocation } from 'react-router-dom';
 import Messages from './components/templates/Messages.jsx';
 import Modal from './components/templates/Modal';
 import CartContext from './utils/contexts/cartContext';
@@ -10,7 +10,11 @@ import AppHeader from './components/templates/app-header/AppHeader';
 const AppLayout = ({ children }) => {
   const { shouldShowModal, toggleModal, isCartModal, isConfirmationModal, changeToCart } = useContext(ModalContext);
   const { resetCart } = useContext(CartContext);
+  const location = useLocation();
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const goToCheckout = () => {
     toggleModal();
     navigate('/checkout');
