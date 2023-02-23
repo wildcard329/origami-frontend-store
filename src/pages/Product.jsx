@@ -14,7 +14,6 @@ const Product = () => {
   useEffect(() => {
     setProduct(getProductById(parseInt(id)));
   }, []);
-  console.log('product ', product);
   return(
     <div className="product-information">
       <AppH1 text={'product information'} />

@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-// import Logo from './assets/images/79Eignqkliu1bLJPO9jw--1--7vtfx.jpg';
-import CartHeader from './components/templates/CartHeader';
+import {  useNavigate } from 'react-router-dom';
 import Messages from './components/templates/Messages.jsx';
 import Modal from './components/templates/Modal';
 import CartContext from './utils/contexts/cartContext';
@@ -26,22 +24,6 @@ const AppLayout = ({ children }) => {
   return(
     <div id='layout'>
       <header className='app-header'>
-        {/* <div>
-          <img className='logo' src={Logo} alt='logo' />
-        </div>
-        <select className='mobile-nav'>
-          <option value={'/'}>Home</option>
-          <option value={'/origami'}>Origami</option>
-          <option value={'/books'}>Books</option>
-        </select>
-        <div className='desktop-nav'>
-          <Link to='/'>Home</Link>
-          <Link to='/origami'>Origami</Link>
-          <Link to='/books'>Books</Link>
-        </div>
-        <div>
-          <CartHeader />
-        </div> */}
         <AppHeader />
       </header>
       <div className='app-content'>
