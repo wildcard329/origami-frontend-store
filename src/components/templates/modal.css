@@ -5,10 +5,15 @@
   right: 0;
   left: 0;
   background-color: white;
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   min-height: 40vh;
   animation: grow 0.25s linear;
+}
+
+.app-modal h5 {
+  max-height: 1rem;
+  overflow: hidden;
 }
 
 .modal-list {
@@ -56,5 +61,21 @@
   } 
   to {
     transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .app-modal {
+    width: 60%;
+  }
+  .app-modal h5 {
+    max-height: 2rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .app-modal h5 {
+    max-height: max-content;
+    overflow: visible;
   }
 }
