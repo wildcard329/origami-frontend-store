@@ -1,12 +1,9 @@
-import { getUniqueKeys } from '../utils/functions/arrayMethods.js';
-import origami from '../assets/configs/productConfig.json';
-import books from '../assets/configs/productConfig2.json';
-const products = [...origami, ...books];
+import * as services from '../services/productService.js';
 
-export const getProductSubcategories = (products) => getUniqueKeys(products, 'category');
+export const getProductSubcategories = (products) => services.getProductSubcategories(products);
 
-export const getProductsByCategory = (category) => category === 'origami' ? origami : category === 'books' ? books : null; 
+export const getProductsByCategory = (category) => services.getProductsByCategory(category);
 
-export const getProductsBySubcategory = (subcategory) => products.filter((product) => product.category === subcategory);
+export const getProductsBySubcategory = (subcategory) => services.getProductsBySubcategory(subcategory);
 
-export const getProductById = (id) => products.find((product) => product.id === id);
+export const getProductById = (id) => services.getProductById(id);
