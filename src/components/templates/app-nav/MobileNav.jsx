@@ -5,10 +5,11 @@ import AppNav from "./AppNav";
 const MobileNav = () => {
   const [isShowing, setIsShowing] = useState(false);
   const toggleShow = () => setIsShowing(() => !isShowing);
+  const hideNav = () => setIsShowing(() => false);
   return(
     <>
       <AppButton btnCb={toggleShow} btnLabel='menu' />
-      {isShowing ? <AppNav /> : null}
+      {isShowing ? <div onClick={hideNav}><AppNav /></div> : null}
     </>
   )
 }
