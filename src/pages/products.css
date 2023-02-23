@@ -17,7 +17,6 @@ html.products .app-content {
   padding: 20px;
   font-size: 20px;
   margin-bottom: 30px;
-  margin-left: -60px;
   border: 2px solid purple;
   color: purple;
   text-transform: capitalize;
@@ -63,5 +62,14 @@ html.products .app-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-  }  
+  }
+  .product-grid-select {
+    margin-left: -60px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-grid-select {
+    margin-left: 0;
+  }
 }
