@@ -2,8 +2,8 @@ p {
   color: orange;
 }
 
-.app-content {
-  position: relative;
+html.products .app-content {
+  padding: 0;
 }
 
 .product-grid {
@@ -11,6 +11,27 @@ p {
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
   justify-content: center;
+}
+
+.product-grid-select {
+  padding: 20px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-left: -60px;
+  border: 2px solid purple;
+  color: purple;
+  text-transform: capitalize;
+  background-color: transparent;
+  border-radius: 25px;
+}
+
+.product-grid-select option {
+  background-color: black;
+}
+
+.product-grid-select option:hover {
+  background-color: orange;
+  color: purple;
 }
 
 .app-content:before {
