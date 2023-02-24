@@ -1,5 +1,7 @@
 import * as services from '../services/productService.js';
 
+export const getProducts = () => services.getProducts();
+
 export const getProductSubcategories = (products) => services.getProductSubcategories(products);
 
 export const getProductsByCategory = (category) => services.getProductsByCategory(category);

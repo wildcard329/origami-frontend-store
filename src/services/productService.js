@@ -11,3 +11,5 @@ export const getProductsByCategory = (category) => category === 'origami' ? orig
 export const getProductsBySubcategory = (subcategory) => filterArray(products, 'category', subcategory);
 
 export const getProductById = (id) => findArrayObject(products, 'id', id);
+
+export const getProducts = () => products;
