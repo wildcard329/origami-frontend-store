@@ -4,14 +4,6 @@
   position: relative;
 }
 
-.app-footer {
-  background-color: black;
-}
-
-.app-footer p {
-  color: white;
-}
-
 .scroll-lock {
   margin: 0;
   height: 100%;

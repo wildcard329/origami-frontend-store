@@ -1,0 +1,22 @@
+.app-footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.app-footer p, h3, a {
+  color: white;
+  padding-bottom: 10px;
+}
+
+.app-footer h3 {
+  text-transform: capitalize;
+}
+
+@media (min-width: 1080px) {
+  .app-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
