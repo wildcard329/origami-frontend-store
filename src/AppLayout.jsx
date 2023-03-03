@@ -6,6 +6,7 @@ import CartContext from './utils/contexts/cartContext';
 import ModalContext from './utils/contexts/modalContext';
 import CartContent from './components/templates/CartContent';
 import AppHeader from './components/templates/app-header/AppHeader';
+import AppFooter from './components/templates/app-footer/AppFooter.jsx';
 
 const AppLayout = ({ children }) => {
   const { shouldShowModal, toggleModal, isCartModal, isConfirmationModal, changeToCart } = useContext(ModalContext);
@@ -46,7 +47,7 @@ const AppLayout = ({ children }) => {
         : null}
       </div>
       <footer className='app-footer'>
-        <p>2023 Online Origami Store</p>
+        <AppFooter />
       </footer>
     </div>
   )
