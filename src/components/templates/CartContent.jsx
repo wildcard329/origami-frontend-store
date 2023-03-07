@@ -22,7 +22,7 @@ const CartContent = () => {
                   title={item.name} 
                   content1={item.quantity} 
                   content2={`$${item.price * item.quantity}`} 
-                  btnContent={<BsTrash fill='orange' onClick={() => removeFromCart(item.id)} />}
+                  btnContent={<BsTrash className="app-icon-btn" fill='orange' onClick={() => removeFromCart(item.id)} />}
                 />
             </li>)
           }

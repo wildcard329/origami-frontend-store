@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.app-icon-btn {
+  cursor: pointer;
+}
+
 .scroll-lock {
   margin: 0;
   height: 100%;
