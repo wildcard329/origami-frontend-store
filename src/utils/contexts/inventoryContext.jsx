@@ -9,7 +9,7 @@ export const InventoryProvider = ({ children }) => {
     setInventory(getProducts());
   }, []);
   return(
-    <InventoryContext.Provider value={{}}>
+    <InventoryContext.Provider value={{ inventory }}>
       {children}
     </InventoryContext.Provider>
   )
