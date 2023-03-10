@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 10px 30px;
   background-color: black;
 }
 
@@ -39,6 +39,9 @@ html.books .app-header a[href="/books"] {
 }
 
 @media (min-width: 768px) {
+  .app-header {
+    padding: 0 30px;
+  }
   .mobile-nav {
     display: none;
   }
@@ -60,3 +63,8 @@ html.books .app-header a[href="/books"] {
   }
 }
 
+@media (min-width: 1400px) {
+  .app-header {
+    padding: 10px 30px;
+  }
+}
